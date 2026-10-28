@@ -10,7 +10,7 @@ st.markdown(
     """
     <style>
     /* Import Google Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@400;600&display=swap');
+    @import url('https://fonts.google.com/specimen/Google+Sans');
 
     /* Apply global font and background theme */
     html, body, [class*="css"] {
