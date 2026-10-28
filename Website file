@@ -1,0 +1,80 @@
+import streamlit as st
+
+# Page configuration
+st.set_page_config(
+    page_title="Happy Birthday!", page_icon="🎂", layout="centered"
+)
+
+# --- CUSTOM CSS & STYLING ---
+st.markdown(
+    """
+    <style>
+    /* Import Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@400;600&display=swap');
+
+    /* Apply global font and background theme */
+    html, body, [class*="css"] {
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    /* Custom pastel pink birthday background theme */
+    .stApp {
+        background: linear-gradient(135deg, #fff0f3 0%, #ffccd5 100%);
+    }
+
+    /* Customize headers */
+    h1, h2, h3 {
+        font-family: 'Fredoka', cursive;
+        color: #d90429;
+    }
+
+    /* Custom styling for message cards */
+    .birthday-card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 15px;
+        border: 2px dashed #ffb3c1;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    
+    /* Banner styling */
+    .banner-container {
+        width: 100%;
+        max-height: 250px;
+        overflow: hidden;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+    </style>
+""",
+    unsafe_allow_html=True,
+)
+
+# --- TOP BANNER IMAGE ---
+# Replace this URL with any banner image link or local file (e.g., "banner.jpg")
+st.image(
+    "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200",
+    use_container_width=True,
+)
+
+# Header
+st.title("Happy Birthday, Alex")
+st.write("Welcome to your custom website built with Python and GitHub.")
+
+# --- PERSONAL MESSAGE BOX ---
+st.markdown("---")
+st.markdown(
+    """
+    <div class="birthday-card">
+        <h3>A Special Note For You</h3>
+        <p>Wishing you the absolute happiest of birthdays! Thanks for being an incredible friend, bringing so much laughter, and making every hangout awesome. Here is to another amazing year ahead!</p>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
+# --- INTERACTIVE SURPRISE ---
+st.markdown("---")
+st.subheader("Click for Your Surprise")
+if st.button("Open Present"):
+    st.success("You unlocked a coupon for free snacks on me. Have an incredible day!")
