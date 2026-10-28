@@ -2,7 +2,7 @@ import streamlit as st
 
 # Page configuration
 st.set_page_config(
-    page_title="Happy Birthday!", layout="centered"
+    page_title="Happy Birthday Busu!", layout="centered"
 )
 
 # --- CUSTOM CSS & STYLING ---
